@@ -1,6 +1,6 @@
 import express, { Router } from "express";
 const app = express()
-const port = 8080
+const port = 3000
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))

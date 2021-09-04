@@ -7,9 +7,10 @@
 4. `yarn start`
 
 ## API
-- Obtener todos los productos: `[GET] http://localhost:8080/api/products/`
-- Obtener un producto según el id: `[GET] http://localhost:8080/api/products/{id}`
-- Crear un nuevo producto: `[POST] http://localhost:8080/api/products/`
+### Productos
+- Obtener todos los productos: `[GET] /api/products/`
+- Obtener un producto según el id: `[GET] /api/products/{id}`
+- Crear un nuevo producto: `[POST] /api/products/`
   Se debe enviar en el body los siguientes campos: 
   ```
     {
@@ -20,7 +21,7 @@
       "stock": 10
     }
   ```
-- Actualizar un producto: `[PUT] http://localhost:8080/api/products/{id}`
+- Actualizar un producto: `[PUT] /api/products/{id}`
   Se debe enviar en el body los siguientes campos:
   ```
     {
@@ -32,4 +33,13 @@
       "stock": 10
     }
   ```
-- Eliminar un producto de la lista según el id: `[DELETE] http://localhost:8080/api/products/{id}`
+- Eliminar un producto de la lista según el id: `[DELETE] /api/products/{id}`
+
+### Carritos
+- Obtener todos los carritos: `[GET] /api/cart/`
+- Crear un nuevo carrito: `[POST] /api/cart/`
+- Obtener un carrito según el id: `[GET] /api/cart/{id}`
+- Eliminar un carrito: `[DELETE] /api/cart/{id}`
+- Agregar un producto al carrito: `[PUT] /api/cart/{id}/products/{product_id}`
+- Obtener los productos en el carrito: `[PUT] /api/cart/{id}/products/`
+- Eliminar un producto del carrito según el id: `[DELETE] /api/cart/{id}/products/{product_id}`

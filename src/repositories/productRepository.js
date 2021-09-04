@@ -18,20 +18,26 @@ class ProductsRepository {
   addProduct = (newProduct) => {
     const products = this.getAllProducts();
     const newId = generateId(products);
-    const updatedProducts = [...products, { ...newProduct, id: newId }];
+    const addedProduct = {
+      ...newProduct,
+      id: newId,
+      timestamp: new Date(),
+    }
+    const updatedProducts = [...products, addedProduct];
     write("./src/products.json", updatedProducts);
     return updatedProducts;
   };
 
   updateProduct = (productToUpdate) => {
     const products = this.getAllProducts();
-
     if (!findById(products, productToUpdate.id)) {
       return "Product not found";
     }
-
+    
+    const generatedTimestamp = new Date();
+    const productUpdated = {...productToUpdate, timestamp: generatedTimestamp}
     const updatedProducts = products.map((product) =>
-      product.id === productToUpdate.id ? productToUpdate : product
+      product.id === productUpdated.id ? productUpdated : product
     );
 
     write("./src/products.json", updatedProducts);

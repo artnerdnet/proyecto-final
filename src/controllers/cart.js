@@ -1,6 +1,31 @@
+import CartServices from "../services/cartSevices"
 
-const cartController = (req,res) => {
-    res.send('controller cart')
+const cartServices = new CartServices()
+
+export const getAllCarts = (req, res) => {
+    res.send(cartServices.getAllCarts())
 }
 
-export default cartController
+export const createCart = (req, res) => {
+    res.send(cartServices.createCart())
+}
+
+export const deleteCart = (req, res) => {
+    const { id } = req.params;
+    res.send(cartServices.deleteCart(id));
+}
+
+export const addProductToCart = (req, res) => {
+    const { id, product_id } = req.params;
+    res.send(cartServices.addProductToCart(id, product_id));
+}
+
+export const getProductsFromCart = (req, res) => {
+    const { id } = req.params;
+    res.send(cartServices.getProductsFromCart(id));
+}
+
+export const deleteProductFromCart = (req, res) => {
+    const { id, product_id } = req.params;
+    res.send(cartServices.deleteProductFromCart(id, product_id));
+}

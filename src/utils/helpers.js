@@ -12,15 +12,15 @@ export const findById = (arr, id) => arr.find(
   (item) => item.id == id
 );
 
-export const generateId = (products) => {
+export const generateId = (arr) => {
   let newId;
   
-  if (!products.length) {
+  if (!arr.length) {
     newId = 0
   } else {
-    const maxId = products.reduce(
+    const maxId = arr.reduce(
       (max, product) => (product.id > max ? product.id : max),
-      products[0].id
+      arr[0].id
     );
     newId = maxId+1
   }
