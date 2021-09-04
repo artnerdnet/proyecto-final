@@ -18,6 +18,7 @@
       "description": "El iPhone SE une un chip superpotente, el tamaño más popular y nuestro precio más asequible. Justo lo que estabas esperando.",
       "picture" : "https://m.media-amazon.com/images/I/81nld4NtAkL._AC_SL1500_.jpg",
       "price" : 479.99,
+      "code": 1235,
       "stock": 10
     }
   ```
@@ -30,6 +31,7 @@
       "description": "El iPhone SE une un chip superpotente, el tamaño más popular y nuestro precio más asequible. Justo lo que estabas esperando.",
       "picture" : "https://m.media-amazon.com/images/I/81nld4NtAkL._AC_SL1500_.jpg",
       "price" : 479.99,
+      "code": 123,
       "stock": 10
     }
   ```
